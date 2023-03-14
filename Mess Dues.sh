@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Bash script to scrape mess from NITC Website
+ #Bash script to scrape mess DUES from NITC Website
 
 curl https://nitc.ac.in/hostels/overview | grep .pdf | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" >> /tmp/pdf.txt
 cat /tmp/pdf.txt | grep e-grantz-students | head -1 > /tmp/link.txt
